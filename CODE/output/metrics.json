@@ -1,0 +1,260 @@
+{
+  "dataset": {
+    "seed": 42,
+    "raw_rows": 5060,
+    "raw_columns": 13,
+    "clean_rows": 5008,
+    "year": 2024,
+    "simulated": true
+  },
+  "quality": {
+    "duplicates_removed": 52,
+    "remaining_rows": 5008,
+    "missing_cells_after": 0,
+    "quantity_iqr_lower": -1.0,
+    "quantity_iqr_upper": 7.0,
+    "quantity_outliers_capped": 25,
+    "raw_missing_cells": 220,
+    "raw_duplicate_rows": 52,
+    "missing_by_column": {
+      "order_id": 0,
+      "order_date": 0,
+      "customer_id": 0,
+      "customer_age": 70,
+      "region": 0,
+      "category": 0,
+      "product": 0,
+      "quantity": 0,
+      "unit_price": 0,
+      "discount": 0,
+      "payment_mode": 0,
+      "delivery_days": 65,
+      "rating": 85
+    }
+  },
+  "kpis": {
+    "total_revenue": 169384561.26193,
+    "gross_sales": 202063565.07,
+    "total_orders": 5008,
+    "unique_customers": 1704,
+    "average_order_value": 33822.79577913938,
+    "average_rating": 3.9650958466453674,
+    "average_delivery_days": 3.510982428115016,
+    "average_discount_pct": 16.330271565495206,
+    "total_quantity": 15263.0
+  },
+  "monthly_revenue": {
+    "Jan": 12346201.35838,
+    "Feb": 13759206.44509,
+    "Mar": 13437152.63794,
+    "Apr": 13999728.30968,
+    "May": 13908462.15078,
+    "Jun": 15268886.80114,
+    "Jul": 13547986.56903,
+    "Aug": 13491463.3311,
+    "Sep": 15477616.13035,
+    "Oct": 14061101.40821,
+    "Nov": 15701679.76268,
+    "Dec": 14385076.357549999
+  },
+  "category_revenue": {
+    "Electronics": 154433390.81394,
+    "Home": 6981788.10834,
+    "Fashion": 6158451.42976,
+    "Grocery": 1810930.90989
+  },
+  "region_revenue": {
+    "East": 45783590.76066,
+    "West": 43560008.02244,
+    "North": 40396211.81332,
+    "South": 39644750.66551
+  },
+  "age_group_revenue": {
+    "18-24": 30459556.4561,
+    "25-34": 65120390.51484,
+    "35-44": 51567866.90502,
+    "45-54": 19313667.035889998,
+    "55+": 2923080.35008
+  },
+  "payment_mode_revenue": {
+    "Cash": 43201188.2725,
+    "Card": 43072907.18915,
+    "Net Banking": 42119241.1758,
+    "Upi": 40991224.62448
+  },
+  "rating_distribution": {
+    "1.5": 1,
+    "1.7": 2,
+    "1.8": 1,
+    "1.9": 1,
+    "2.0": 3,
+    "2.1": 7,
+    "2.2": 9,
+    "2.3": 6,
+    "2.4": 13,
+    "2.5": 18,
+    "2.6": 36,
+    "2.7": 42,
+    "2.8": 51,
+    "2.9": 74,
+    "3.0": 100,
+    "3.1": 115,
+    "3.2": 155,
+    "3.3": 144,
+    "3.4": 223,
+    "3.5": 242,
+    "3.6": 276,
+    "3.7": 283,
+    "3.8": 272,
+    "3.9": 324,
+    "4.0": 370,
+    "4.1": 281,
+    "4.2": 289,
+    "4.3": 276,
+    "4.4": 239,
+    "4.5": 220,
+    "4.6": 203,
+    "4.7": 152,
+    "4.8": 141,
+    "4.9": 114,
+    "5.0": 325
+  },
+  "correlation_matrix": {
+    "quantity": {
+      "quantity": 1.0,
+      "unit_price": 0.0061,
+      "discount": -0.0028,
+      "delivery_days": -0.0003,
+      "rating": 0.0076,
+      "revenue": 0.2844
+    },
+    "unit_price": {
+      "quantity": 0.0061,
+      "unit_price": 1.0,
+      "discount": -0.0145,
+      "delivery_days": 0.0058,
+      "rating": -0.0294,
+      "revenue": 0.8615
+    },
+    "discount": {
+      "quantity": -0.0028,
+      "unit_price": -0.0145,
+      "discount": 1.0,
+      "delivery_days": -0.0029,
+      "rating": -0.007,
+      "revenue": -0.0777
+    },
+    "delivery_days": {
+      "quantity": -0.0003,
+      "unit_price": 0.0058,
+      "discount": -0.0029,
+      "delivery_days": 1.0,
+      "rating": 0.0164,
+      "revenue": -0.0022
+    },
+    "rating": {
+      "quantity": 0.0076,
+      "unit_price": -0.0294,
+      "discount": -0.007,
+      "delivery_days": 0.0164,
+      "rating": 1.0,
+      "revenue": -0.0227
+    },
+    "revenue": {
+      "quantity": 0.2844,
+      "unit_price": 0.8615,
+      "discount": -0.0777,
+      "delivery_days": -0.0022,
+      "rating": -0.0227,
+      "revenue": 1.0
+    }
+  },
+  "tests": {
+    "welch_t_test": {
+      "t_stat": 1.425527618540971,
+      "p_value": 0.1541358270546134,
+      "alpha": 0.05,
+      "significant": false
+    },
+    "anova": {
+      "f_stat": 1.0972108073234033,
+      "p_value": 0.34891413350173306,
+      "alpha": 0.05,
+      "significant": false
+    },
+    "pearson": {
+      "r": 0.01639447282051027,
+      "p_value": 0.24605708527610656,
+      "alpha": 0.05,
+      "significant": false
+    }
+  },
+  "regression": {
+    "slope": 170262.47780863632,
+    "intercept": 13008673.999404697,
+    "r_squared": 0.4039421720659605,
+    "p_value": 0.026344302864708836,
+    "forecast_months": [
+      "Jan",
+      "Feb",
+      "Mar"
+    ],
+    "forecast_revenue": [
+      15222086.21091697,
+      15392348.688725606,
+      15562611.166534241
+    ]
+  },
+  "descriptive": {
+    "revenue": {
+      "count": 5008.0,
+      "mean": 33822.79577913938,
+      "std": 56563.38244971437,
+      "min": 193.752,
+      "25%": 2222.165625,
+      "50%": 5331.3430450000005,
+      "75%": 38025.85862,
+      "max": 383862.31455
+    },
+    "quantity": {
+      "count": 5008.0,
+      "mean": 3.047723642172524,
+      "std": 1.4427074696984763,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 3.0,
+      "75%": 4.0,
+      "max": 7.0
+    },
+    "rating": {
+      "count": 5008.0,
+      "mean": 3.9650958466453674,
+      "std": 0.6090127221205937,
+      "min": 1.5,
+      "25%": 3.6,
+      "50%": 4.0,
+      "75%": 4.4,
+      "max": 5.0
+    }
+  },
+  "files": {
+    "raw_csv": "data\\retail_sales_2024_raw.csv",
+    "cleaned_csv": "data\\retail_sales_2024_cleaned.csv",
+    "charts_dir": "output\\charts"
+  },
+  "chart_files": [
+    "output\\charts\\01_missing_values.png",
+    "output\\charts\\02_monthly_revenue.png",
+    "output\\charts\\03_category_revenue.png",
+    "output\\charts\\04_region_revenue.png",
+    "output\\charts\\05_correlation_heatmap.png",
+    "output\\charts\\06_order_value_histogram.png",
+    "output\\charts\\07_boxplot_by_category.png",
+    "output\\charts\\08_discount_vs_quantity.png",
+    "output\\charts\\09_rating_distribution.png",
+    "output\\charts\\10_payment_mode_pie.png",
+    "output\\charts\\11_region_month_heatmap.png",
+    "output\\charts\\12_age_group_revenue.png",
+    "output\\charts\\13_trend_forecast.png"
+  ]
+}
